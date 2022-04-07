@@ -23,6 +23,25 @@ public class SignUpTest  extends DriverFactory {
 		
 	}
 	
+	@And("Account does not exist {string}")
+	
+	public void account_does_not_exist(String string) throws InterruptedException, IOException, ClassNotFoundException{
+		//Deletion of test account if exist
+		//This Test should NOT be run in production server. 
+		
+		// 0 mean test account not created
+		// 1 mean test account is already created
+		
+		int testAccountExistCheck = MySqlQueryFunction.getCount(String.format("SELECT COUNT(*) FROM User_detail WHERE email = '%s';",string));
+		if(testAccountExistCheck==1) {
+			MySqlQueryFunction.deleteRecord(String.format("DELETE FROM Address WHERE user_id = (SELECT id FROM User_detail WHERE email = '%s');", string));
+			MySqlQueryFunction.deleteRecord(String.format("DELETE FROM Cart WHERE user_id = (SELECT id FROM User_detail WHERE email = '%s');", string));
+			MySqlQueryFunction.deleteRecord(String.format("DELETE FROM User_detail WHERE email = '%s';", string));
+		}
+		
+	    
+	}
+	
 	@And("User enter First_Name as {string}")
 	public void user_enter_first_name_as(String string) throws InterruptedException, IOException {
 	    signupPage.sendFirstNameField(string);
@@ -113,9 +132,9 @@ public class SignUpTest  extends DriverFactory {
 	}
 
 	@Then("Account should be created {string}")
-	public void account_should_be_created(String string) throws ClassNotFoundException, SQLException {
+	public void account_should_be_created(String string) throws ClassNotFoundException{
 		//to query DB 
-		int actual = MySqlQueryFunction.getCount("SELECT COUNT(*) FROM User_detail WHERE email = " +'"' + string + '"' );
+		int actual = MySqlQueryFunction.getCount(String.format("SELECT COUNT(*) FROM User_detail WHERE email = '%s';",string));
 		int expected = 1;
 		
 		// 1 mean can find = account is created
@@ -150,7 +169,8 @@ public class SignUpTest  extends DriverFactory {
 	}
 
 	@Then("It should bring user back to Sign Up - Personal page")
-	public void it_should_bring_user_back_to_sign_up_personal_page() {
+	public void it_should_bring_user_back_to_sign_up_personal_page() throws InterruptedException {
+		Thread.sleep(3000);
 	    String actual = signupPage.getH4Text();
 	    String expected = "Sign Up - Personal";
 	    Assert.assertEquals(actual, expected,"Did not go back to Sign Up - Personal page");
@@ -163,9 +183,9 @@ public class SignUpTest  extends DriverFactory {
 	}
 
 	@Then("Account should not be created {string}")
-	public void account_should_not_be_created(String string) throws ClassNotFoundException, SQLException {
+	public void account_should_not_be_created(String string) throws ClassNotFoundException{
 		//to query DB 
-		int actual = MySqlQueryFunction.getCount("SELECT COUNT(*) FROM User_detail WHERE email = " +'"' + string + '"' );
+		int actual = MySqlQueryFunction.getCount(String.format("SELECT COUNT(*) FROM User_detail WHERE email = '%s';",string));
 		int expected = 0;
 		
 		// 0 mean cannot find = account NOT created

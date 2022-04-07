@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/13/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 06 17:38:02 SGT 2022</td>
+<td>Started on:</td><td>Thu Apr 07 10:16:03 SGT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>218 seconds (218998 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7351 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +75,369 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td><div><pre>java.lang.AssertionError: Did not go back to Sign Up - Personal page expected [Sign Up - Personal] but found [Sign Up - Address]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at steps.SignUpTest.it_should_bring_user_back_to_sign_up_personal_page(SignUpTest.java:156)
-	at ✽.It should bring user back to Sign Up - Personal page(file:///home/zixiang/eclipse-workspace/medicare_automation_test/src/test/resources/featureFiles/medicare_SignUp.feature:82)
-</pre></div><a href='#' onClick='toggleBox("stack-trace276022884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace276022884'><pre>java.lang.AssertionError: Did not go back to Sign Up - Personal page expected [Sign Up - Personal] but found [Sign Up - Address]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at steps.SignUpTest.it_should_bring_user_back_to_sign_up_personal_page(SignUpTest.java:156)
-	at ✽.It should bring user back to Sign Up - Personal page(file:///home/zixiang/eclipse-workspace/medicare_automation_test/src/test/resources/featureFiles/medicare_SignUp.feature:82)
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace836449498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace836449498'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
 </pre></div></td>
-<td>22</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2140617236", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2140617236'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace513128019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace513128019'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace636953520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace636953520'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace48390515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace48390515'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace658563862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace658563862'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace824177287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824177287'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1725885575", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1725885575'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1826195973", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1826195973'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace748229733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace748229733'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace623224248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace623224248'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace67985650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace67985650'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
+<tr>
+<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace307036850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace307036850'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;4.0.0-alpha-7&apos;, revision: &apos;de8579b6d5&apos;
+System info: host: &apos;Zixiang&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.16.0-kali3-amd64&apos;, java.version: &apos;11.0.14&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:128)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:562)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:843)
+	at steps.Hooks.beforeScenario(Hooks.java:16)
+</pre></div></td>
+<td>0</td>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -108,67 +450,7 @@ function toggleAllBoxes() {
 <td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
 <td></td>
 <td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>5</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td></td>
-<td>35</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td></td>
-<td>22</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td></td>
-<td>31</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>7</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[To check HomePage user experience]"</td>
-<td></td>
-<td>6</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td></td>
-<td>31</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
-<tr>
-<td title='runner.RegressionRunner.runScenario()'><b>runScenario</b><br>Test class: runner.RegressionRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional.empty"</td>
-<td></td>
-<td>22</td>
-<td>runner.RegressionRunner@4fb61f4a</td></tr>
+<td>runner.RegressionRunner@4a94ee4</td></tr>
 </table><p>
 </body>
 </html>

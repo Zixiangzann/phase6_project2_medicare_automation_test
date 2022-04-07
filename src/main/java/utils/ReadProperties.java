@@ -24,13 +24,5 @@ public class ReadProperties {
 
 		return properties.getProperty(key);
 	}
-	
-	//Just testing read properties function
-	public static void main(String[] args) throws IOException {
-		ReadProperties config = new ReadProperties();
-		config.loadProperties("config.properties");
-		String browser = config.get("browser");
-		System.out.println(browser);
-	}
 
 }

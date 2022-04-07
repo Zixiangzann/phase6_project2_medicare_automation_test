@@ -21,9 +21,9 @@ public class BasePage extends DriverFactory{
 	protected JavascriptExecutor jsExecutor;
 	
     public BasePage(){
-    	this.wait = new WebDriverWait(getDriver(),Duration.ofSeconds(15));
-    	this.actions = new Actions(getDriver());
-        this.jsExecutor=((JavascriptExecutor)getDriver());
+    	this.wait = new WebDriverWait(driver,Duration.ofSeconds(15));
+    	this.actions = new Actions(driver);
+        this.jsExecutor=((JavascriptExecutor)driver);
     }
     
     public void waitAndClickElement(WebElement element,int delay) throws InterruptedException {
@@ -57,7 +57,7 @@ public class BasePage extends DriverFactory{
     }
     
     public String getCurrentUrl() {
-    	return driver.get().getCurrentUrl();
+    	return driver.getCurrentUrl();
     }
     
     public String getText(WebElement element) {
@@ -83,12 +83,12 @@ public class BasePage extends DriverFactory{
     }
     
     public void goToUrl(String url) {
-    	driver.get().get(url);
+    	driver.get(url);
     }
     
     
     public Cookie getCookies(String cookiesName) {
-    	return driver.get().manage().getCookieNamed(cookiesName);
+    	return driver.manage().getCookieNamed(cookiesName);
     }
     
     

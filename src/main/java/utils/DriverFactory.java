@@ -1,7 +1,6 @@
 package utils;
 
 import java.net.URL;
-import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,19 +18,15 @@ import pageFactory.HomePage;
 import pageFactory.SignupPage;
 
 
-
 public class DriverFactory {
 
 	//initialize driver and Page Object Variable
-	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	public static WebDriver driver;
 	public static BasePage basePage;
 	public static HomePage homePage;
 	public static SignupPage signupPage;
-	
-	//public static MainPage mainPage;
-	
 
-	public static void setDriver() {
+	public WebDriver getDriver() {
 
 		try {
 			// Read Config
@@ -44,14 +39,15 @@ public class DriverFactory {
 			switch (browser) {
 
 			case "firefox": {
+				
 				WebDriverManager.firefoxdriver().setup();
 				FirefoxOptions options = new FirefoxOptions();
 				
 				if(localOrGrid.equalsIgnoreCase("local")) {
-					driver.set(new FirefoxDriver(options));				
+					driver = new FirefoxDriver(options);
 				}else if(localOrGrid.equalsIgnoreCase("grid")) {
 					//run on grid
-					driver.set(new RemoteWebDriver(new URL(gridURL),options));
+					driver = new RemoteWebDriver(new URL(gridURL),options);
 				}else {
 					System.out.println("please indicate local or grid in the config file");
 				}
@@ -65,10 +61,10 @@ public class DriverFactory {
 				ChromeOptions options = new ChromeOptions();
 				
 				if(localOrGrid.equalsIgnoreCase("local")) {
-					driver.set(new ChromeDriver(options));					
+					driver = new ChromeDriver(options);
 				}else if(localOrGrid.equalsIgnoreCase("grid")) {
 					//run on grid
-					driver.set(new RemoteWebDriver(new URL(gridURL),options));
+					driver = new RemoteWebDriver(new URL(gridURL),options);
 				}else {
 					System.out.println("please indicate local or grid in the config file");
 				}
@@ -77,17 +73,19 @@ public class DriverFactory {
 			}
 				break;
 			case "edge": {
+				
 				WebDriverManager.edgedriver().setup();
 				EdgeOptions options = new EdgeOptions();
 
 				if(localOrGrid.equalsIgnoreCase("local")) {
-					driver.set(new EdgeDriver(options));					
+					driver = new EdgeDriver(options);
 				}else if(localOrGrid.equalsIgnoreCase("grid")) {
 					//run on grid
-					driver.set(new RemoteWebDriver(new URL(gridURL),options));
+					driver = new RemoteWebDriver(new URL(gridURL),options);
 				}else {
 					System.out.println("please indicate local or grid in the config file");
-				}				
+				}	
+				
 				
 			}//TO DO - to add Safari browser if required
 				break;
@@ -95,19 +93,13 @@ public class DriverFactory {
 		} catch (Exception e) {
 			System.out.println("Fail to setup browser: " + e.getMessage());
 		} finally {
-			getDriver().manage().window().maximize();
-			getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-			
 			//initialize PageFactory class
-			basePage = PageFactory.initElements(getDriver(), BasePage.class);
-			homePage = PageFactory.initElements(getDriver(), HomePage.class);
-			signupPage = PageFactory.initElements(getDriver(), SignupPage.class);
+			basePage = PageFactory.initElements(driver, BasePage.class);
+			homePage = PageFactory.initElements(driver, HomePage.class);
+			signupPage = PageFactory.initElements(driver, SignupPage.class);
 		}
+		return driver;
 
-	}
-
-	public static WebDriver getDriver() {
-		return driver.get();
 	}
 
 }

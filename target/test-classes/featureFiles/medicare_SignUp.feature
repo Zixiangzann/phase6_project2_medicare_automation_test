@@ -7,6 +7,7 @@ Given User navigate to Sign Up page
 #Positive scenarios
 Scenario Outline:
 User should be able to create account with valid details
+And Account does not exist "<Valid email>"
 And User enter First_Name as "<First Name>"
 And User enter Last_Name as "<Last Name>"
 And User enter Email as "<Valid email>"
