@@ -1,6 +1,6 @@
 package steps;
 
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
