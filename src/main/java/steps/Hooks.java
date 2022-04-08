@@ -16,7 +16,7 @@ public class Hooks extends DriverFactory {
 	public void beforeScenario() throws InterruptedException {
 		driver = getDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 
 	}
 
