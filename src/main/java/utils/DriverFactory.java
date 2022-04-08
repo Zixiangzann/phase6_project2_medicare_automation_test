@@ -60,7 +60,7 @@ public class DriverFactory {
 				break;
 
 			case "chrome": {
-				WebDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
 				ChromeOptions options = new ChromeOptions();
 				
 				if(localOrGrid.equalsIgnoreCase("local")) {
