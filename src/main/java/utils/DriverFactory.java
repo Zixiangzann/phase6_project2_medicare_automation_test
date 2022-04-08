@@ -17,13 +17,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class DriverFactory {
-	
-	private final String GECKO_DRIVER_DIRECTORY = System.getProperty("user.dir")
-			+ "/src/main/resources/utils/drivers/geckodriver.exe";
-	private final String CHROME_DRIVER_DIRECTORY = System.getProperty("user.dir")
-			+ "/src/main/resources/utils/drivers/chromedriver.exe";
-	private final String EDGE_DRIVER_DIRECTORY = System.getProperty("user.dir")
-			+ "/src/main/resources/utils/drivers/msedgedriver.exe";
 
 	//initialize driver and Page Object Variable
 	public static WebDriver driver;
@@ -64,6 +57,8 @@ public class DriverFactory {
 			case "chrome": {
 				WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
 				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--no-sandbox");
 				
 				if(localOrGrid.equalsIgnoreCase("local")) {
 					driver = new ChromeDriver(options);
