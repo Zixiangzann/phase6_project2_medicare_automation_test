@@ -1,94 +1,26 @@
 package pageFactory;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.DriverFactory;
 
 public class BasePage extends DriverFactory{
 	
-	protected WebDriverWait wait;
-	protected Actions actions;
-	protected JavascriptExecutor jsExecutor;
+	public JavascriptExecutor jsExecutor =((JavascriptExecutor)getDriver());
 	
-    public BasePage(){
-    	this.wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-    	this.actions = new Actions(driver);
-        this.jsExecutor=((JavascriptExecutor)driver);
-    }
-    
-    public void waitAndClickElement(WebElement element,int delay) throws InterruptedException {
-    	this.wait.until(ExpectedConditions.elementToBeClickable(element));
-    	Thread.sleep(delay);
-    	element.click();
-    }
-    
-    public void waitAndClickNthElement(List <WebElement> elements, int nthElement,int delay) throws InterruptedException {
-    	Thread.sleep(delay);
-    	this.wait.until(ExpectedConditions.elementToBeClickable(elements.get(nthElement)));
-    	Thread.sleep(delay);
-    	elements.get(nthElement).click();
-    	
-    }
-    
-    public void sendKeys(WebElement element,String textToSend) throws InterruptedException {
-    	this.wait.until(ExpectedConditions.visibilityOf(element));
-    	Thread.sleep(1000);
-    	element.sendKeys(textToSend);
-    }
-    
-    public int getElementSize(List <WebElement> elements, int delay) throws InterruptedException {
-    	Thread.sleep(delay);
-    	return elements.size();
-    }
-    
-    public String getElementAttribute(WebElement element,String attribute) {
-    	return element.getAttribute(attribute);
-    	
-    }
     
     public String getCurrentUrl() {
-    	return driver.getCurrentUrl();
-    }
-    
-    public String getText(WebElement element) {
-    	return element.getText();
-    }
-    
-    public ArrayList<String> getItemListByAttribute(List<WebElement> listOfElements,String attribute) {
-    	ArrayList<String> itemList = new ArrayList<String>();
-		
-		for(WebElement WebElement : listOfElements) {
-			itemList.add(WebElement.getAttribute(attribute));
-		}
-		return itemList;
-    }
-    
-    public ArrayList<String> getItemListByText(List<WebElement> listOfElements) {
-    	ArrayList<String> itemList = new ArrayList<String>();
-		
-		for(WebElement WebElement : listOfElements) {
-			itemList.add(WebElement.getText());
-		}
-		return itemList;
+    	return getDriver().getCurrentUrl();
     }
     
     public void goToUrl(String url) {
-    	driver.get(url);
+    	getDriver().get(url);
     }
     
     
     public Cookie getCookies(String cookiesName) {
-    	return driver.manage().getCookieNamed(cookiesName);
+    	return getDriver().manage().getCookieNamed(cookiesName);
     }
     
     

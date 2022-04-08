@@ -1,22 +1,32 @@
 package steps;
 
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import pageFactory.BasePage;
+import pageFactory.HomePage;
+import pageFactory.SignupPage;
 import utils.DriverFactory;
 
-public class Hooks extends DriverFactory {
+public class Hooks{
+	
+	public static WebDriver driver;
+	public static BasePage basePage;
+	public static HomePage homePage;
+	public static SignupPage signupPage;
 	
 	@Before
 	public void beforeScenario() throws InterruptedException {
-		driver = getDriver();
+		DriverFactory.setDriver();
+		driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 
 	}
 

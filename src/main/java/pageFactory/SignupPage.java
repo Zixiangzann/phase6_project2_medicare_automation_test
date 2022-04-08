@@ -2,13 +2,18 @@ package pageFactory;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SignupPage extends BasePage {
+import utils.DriverFactory;
 
-	public SignupPage() throws IOException {
-		super();
+public class SignupPage extends DriverFactory{
+
+	public SignupPage(WebDriver driver){
+		PageFactory.initElements(getDriver(), this);
 	}
 
 	//page1
@@ -42,104 +47,99 @@ public class SignupPage extends BasePage {
 	
 	
 	
-	public SignupPage sendFirstNameField(String firstname) throws InterruptedException, IOException {
-		sendKeys(firstNameField, firstname);
-		return new SignupPage();
+	public void sendFirstNameField(String firstname) throws InterruptedException, IOException {
+		firstNameField.sendKeys(firstname);
+		
 	}
 	
-	public SignupPage sendLastNameField(String lastname) throws InterruptedException, IOException {
-		sendKeys(lastNameField, lastname);
-		return new SignupPage();
+	public void sendLastNameField(String lastname) throws InterruptedException, IOException {
+		lastNameField.sendKeys(lastname);
 	}
 	
-	public SignupPage sendEmailField(String email) throws InterruptedException, IOException {
-		sendKeys(emailField, email);
-		return new SignupPage();
+	public void sendEmailField(String email) throws InterruptedException, IOException {
+		emailField.sendKeys(email);
 	}
 	
-	public SignupPage sendContactNumberField(String contactnumber) throws InterruptedException, IOException {
-		sendKeys(contactNumberField, contactnumber);
-		return new SignupPage();
+	public void sendContactNumberField(String contactnumber) throws InterruptedException, IOException {
+		contactNumberField.sendKeys(contactnumber);
 	}
 	
-	public SignupPage sendpasswordField(String password) throws InterruptedException, IOException {
-		sendKeys(passwordField, password);
-		return new SignupPage();
+	public void sendpasswordField(String password) throws InterruptedException, IOException {
+		passwordField.sendKeys(password);
 	}
 	
-	public SignupPage sendConfirmPasswordField(String confirmPassword) throws InterruptedException, IOException {
-		sendKeys(confirmPasswordField, confirmPassword);
-		return new SignupPage();
+	public void sendConfirmPasswordField(String confirmPassword) throws InterruptedException, IOException {
+		confirmPasswordField.sendKeys(confirmPassword);
 	}
 	
-	public SignupPage sendAddressOneField(String addressone) throws InterruptedException, IOException {
-		sendKeys(addressOneField, addressone);
-		return new SignupPage();
+	public void sendAddressOneField(String addressone) throws InterruptedException, IOException {
+		addressOneField.sendKeys(addressone);
 	}
 	
-	public SignupPage sendAddressTwoField(String addresstwo) throws InterruptedException, IOException {
-		sendKeys(addressTwoField, addresstwo);
-		return new SignupPage();
+	public void sendAddressTwoField(String addresstwo) throws InterruptedException, IOException {
+		addressTwoField.sendKeys(addresstwo);
 	}
 	
-	public SignupPage sendCityField(String city) throws InterruptedException, IOException {
-		sendKeys(cityField, city);
-		return new SignupPage();
+	public void sendCityField(String city) throws InterruptedException, IOException {
+		cityField.sendKeys(city);
 	}
 	
-	public SignupPage sendPostalCodeField(String postalcode) throws InterruptedException, IOException {
-		sendKeys(postalCodeField, postalcode);
-		return new SignupPage();
+	public void sendPostalCodeField(String postalcode) throws InterruptedException, IOException {
+		postalCodeField.sendKeys(postalcode);
 	}
 	
-	public SignupPage sendStateField(String state) throws InterruptedException, IOException {
-		sendKeys(stateField, state);
-		return new SignupPage();
+	public void sendStateField(String state) throws InterruptedException, IOException {
+		stateField.sendKeys(state);
 	}
 	
-	public SignupPage sendCountryField(String country) throws InterruptedException, IOException {
-		sendKeys(countryField, country);
-		return new SignupPage();
+	public void sendCountryField(String country) throws InterruptedException, IOException {
+		countryField.sendKeys(country);
 	}
 	
-	public SignupPage clickUserRadioBtn() throws InterruptedException, IOException {
-		waitAndClickElement(userRadioBtn, 500);
-		return new SignupPage();
+	public void clickUserRadioBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(userRadioBtn));
+		userRadioBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public SignupPage clickSupplierRadioBtn() throws InterruptedException, IOException {
-		waitAndClickElement(supplierRadioBtn, 500);
-		return new SignupPage();
+	public void clickSupplierRadioBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(supplierRadioBtn));
+		supplierRadioBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public SignupPage clickNextBillingBtn() throws InterruptedException, IOException {
-		waitAndClickElement(nextBillingBtn, 500);
-		return new SignupPage();
+	public void clickNextBillingBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(nextBillingBtn));
+		nextBillingBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public SignupPage clickBackPersonalBtn() throws InterruptedException, IOException {
-		waitAndClickElement(backPersonalBtn, 500);
-		return new SignupPage();
+	public void clickBackPersonalBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(backPersonalBtn));
+		backPersonalBtn.click();
+		Thread.sleep(500);
 	}
-	public SignupPage clickNextConfirmBtn() throws InterruptedException, IOException {
-		waitAndClickElement(nextConfirmBtn, 500);
-		return new SignupPage();
+	public void clickNextConfirmBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(nextConfirmBtn));
+		nextConfirmBtn.click();
+		Thread.sleep(500);
 	}
-	public SignupPage clickConfirmBtn() throws InterruptedException, IOException {
-		waitAndClickElement(confirmBtn, 500);
-		return new SignupPage();
+	public void clickConfirmBtn() throws InterruptedException, IOException {
+		getWait().until(ExpectedConditions.elementToBeClickable(confirmBtn));
+		confirmBtn.click();
+		Thread.sleep(500);
 	}
 	
 	public String getEmailError() {
-		return getText(emailError);
+		return emailError.getText();
 	}
 	
 	public String getConfirmPasswordError() {
-		return getText(confirmPasswordError);
+		return confirmPasswordError.getText();
 	}
 	
 	public String getH4Text() {
-		return getText(h4);
+		return h4.getText();
 	}
 	
 

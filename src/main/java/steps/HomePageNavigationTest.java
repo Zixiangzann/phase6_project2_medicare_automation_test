@@ -4,13 +4,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import utils.DriverFactory;
+import pageFactory.BasePage;
+import pageFactory.HomePage;
+import pageFactory.SignupPage;
 
-public class HomePageNavigationTest extends DriverFactory {
+public class HomePageNavigationTest{
+	public static WebDriver driver;
+	
+	BasePage basePage = new BasePage();
+	HomePage homePage = new HomePage(driver);
+	SignupPage signupPage = new SignupPage(driver);
 
 	@Given("User is at Home page")
 	public void user_is_at_home_page() throws InterruptedException {

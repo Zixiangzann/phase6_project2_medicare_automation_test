@@ -1,17 +1,25 @@
 package steps;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import utils.DriverFactory;
+import pageFactory.BasePage;
+import pageFactory.HomePage;
+import pageFactory.SignupPage;
 import utils.MySqlQueryFunction;
 
-public class SignUpTest  extends DriverFactory {
+public class SignUpTest{
+	
+	public static WebDriver driver;
+	
+	BasePage basePage = new BasePage();
+	HomePage homePage = new HomePage(driver);
+	SignupPage signupPage = new SignupPage(driver);
 	
 	@Given("User navigate to Sign Up page")
 	public void user_navigate_to_sign_up_page() throws InterruptedException, IOException {

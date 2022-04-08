@@ -4,13 +4,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends BasePage{
+import utils.DriverFactory;
+
+public class HomePage extends DriverFactory{
 	
-	public HomePage() throws IOException {
-		super();
+	public HomePage(WebDriver driver){
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public @FindBy(id="about") WebElement aboutBtn;
@@ -22,46 +29,62 @@ public class HomePage extends BasePage{
 	public @FindBy(xpath="//ul[contains(@class,'nav navbar-nav')]/li") List<WebElement> navigationBarItems;
 	public @FindBy(xpath="//h3") List<WebElement> headerItems;
 	
-	public HomePage clickAboutBtn() throws IOException, InterruptedException {
-		waitAndClickElement(aboutBtn, 500);
-		return new HomePage();
+	public void clickAboutBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(aboutBtn));
+		aboutBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public HomePage clickContactBtn() throws IOException, InterruptedException {
-		waitAndClickElement(contactBtn, 500);
-		return new HomePage();
+	public void clickContactBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(contactBtn));
+		contactBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public HomePage clickListProductsBtn() throws IOException, InterruptedException {
-		waitAndClickElement(listProductsBtn, 500);
-		return new HomePage();
+	public void clickListProductsBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(listProductsBtn));
+		listProductsBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public HomePage clickSignUpBtn() throws IOException, InterruptedException {
-		waitAndClickElement(signupBtn, 500);
-		return new HomePage();
+	public void clickSignUpBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(signupBtn));
+		signupBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public HomePage clickLoginBtn() throws IOException, InterruptedException {
-		waitAndClickElement(loginBtn, 500);
-		return new HomePage();
+	public void clickLoginBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(loginBtn));
+		loginBtn.click();
+		Thread.sleep(500);
 	}
 	
-	public HomePage clickHomePageBtn() throws IOException, InterruptedException {
-		waitAndClickElement(homePageBtn, 500);
-		return new HomePage();
+	public void clickHomePageBtn() throws IOException, InterruptedException {
+		getWait().until(ExpectedConditions.elementToBeClickable(homePageBtn));
+		homePageBtn.click();
+		Thread.sleep(500);
 	}
 
 	
 	public ArrayList<String> getNavBarItems() throws IOException, InterruptedException {
-		return getItemListByText(navigationBarItems);
 		
-	}
+		ArrayList<String> itemList = new ArrayList<String>();
+				
+				for(WebElement WebElement : navigationBarItems) {
+					itemList.add(WebElement.getText());
+				}
+				return itemList;
+		    }
+		
 	
 	public ArrayList<String> getHeaderItems() throws IOException, InterruptedException {
-		return getItemListByText(headerItems);
 		
-	}
-	
+		ArrayList<String> itemList = new ArrayList<String>();
+		
+		for(WebElement WebElement : headerItems) {
+			itemList.add(WebElement.getText());
+		}
+		return itemList;
+    }
 
 }
