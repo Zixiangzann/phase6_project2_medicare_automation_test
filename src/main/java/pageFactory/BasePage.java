@@ -21,7 +21,7 @@ public class BasePage extends DriverFactory{
 	protected JavascriptExecutor jsExecutor;
 	
     public BasePage(){
-    	this.wait = new WebDriverWait(driver,Duration.ofSeconds(15));
+    	this.wait = new WebDriverWait(driver,15);
     	this.actions = new Actions(driver);
         this.jsExecutor=((JavascriptExecutor)driver);
     }
