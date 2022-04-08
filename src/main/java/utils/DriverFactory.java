@@ -62,6 +62,8 @@ public class DriverFactory {
 			case "chrome": {
 				WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
 				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-dev-shm-usage"); 
+				options.addArguments("--no-sandbox"); 
 				
 				if(localOrGrid.equalsIgnoreCase("local")) {
 					driver = new ChromeDriver(options);
