@@ -1,5 +1,4 @@
-Feature: 
-To test account creation functionality
+Feature: To test account creation functionality
 
 Background:
 Given User navigate to Sign Up page

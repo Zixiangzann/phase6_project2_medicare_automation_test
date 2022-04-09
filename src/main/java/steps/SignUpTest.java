@@ -12,6 +12,7 @@ import pageFactory.BasePage;
 import pageFactory.HomePage;
 import pageFactory.SignupPage;
 import utils.MySqlQueryFunction;
+import utils.ReadProperties;
 
 public class SignUpTest{
 	
@@ -23,7 +24,12 @@ public class SignUpTest{
 	
 	@Given("User navigate to Sign Up page")
 	public void user_navigate_to_sign_up_page() throws InterruptedException, IOException {
-		basePage.goToUrl("http://localhost:8082/medicare/home");
+		
+		ReadProperties config = new ReadProperties();
+		config.loadProperties("config.properties");
+		String homeURL = config.get("homeURL");
+		
+		basePage.goToUrl(homeURL);
 		//navigate to sign up page
 		Thread.sleep(1000);
 		homePage.clickSignUpBtn();

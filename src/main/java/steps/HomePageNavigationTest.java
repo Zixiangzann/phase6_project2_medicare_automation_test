@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import pageFactory.BasePage;
 import pageFactory.HomePage;
 import pageFactory.SignupPage;
+import utils.ReadProperties;
 
 public class HomePageNavigationTest{
 	public static WebDriver driver;
@@ -19,10 +20,14 @@ public class HomePageNavigationTest{
 	BasePage basePage = new BasePage();
 	HomePage homePage = new HomePage(driver);
 	SignupPage signupPage = new SignupPage(driver);
-
+	
 	@Given("User is at Home page")
-	public void user_is_at_home_page() throws InterruptedException {
-		basePage.goToUrl("http://localhost:8082/medicare/home");
+	public void user_is_at_home_page() throws InterruptedException, IOException {
+		ReadProperties config = new ReadProperties();
+		config.loadProperties("config.properties");
+		String homeURL = config.get("homeURL");
+		
+		basePage.goToUrl(homeURL);
 		//Some load time
 		Thread.sleep(1000);
 
